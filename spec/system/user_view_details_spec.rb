@@ -17,6 +17,13 @@ describe "usuário vê os detalhes de um cliente ao clicar no seu nome" do
     click_on 'Adriano Silva'
 
     # Assert
+    expect(page).to have_content 'Adriano Silva'
+    expect(page).not_to have_content 'Bianca Sedro'
+    expect(page).to have_content 'Email: adriano@email.com'
+    expect(page).to have_content 'Endereço: rua das mangueiras, n 40, apto 203. Salvador, Bahia'
+    expect(page).to have_content 'Aniversário: 08/02/1991'
+
+
 
   end
 

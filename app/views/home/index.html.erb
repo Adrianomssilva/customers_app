@@ -2,7 +2,7 @@
 
 <% if @customers.present? %>
 <% @customers.each do |customer|  %>
-  <%=customer.full_name%>
+  <%=link_to customer.full_name, customer%>
   Aniversário: <%= I18n.l(customer.birthday) %>
   Email: <%= customer.email %>
 
