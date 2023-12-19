@@ -1,1 +1,12 @@
 <h2>Lista De Clientes</h2>
+
+<% if @customers.present? %>
+<% @customers.each do |customer|  %>
+  <%=customer.full_name%>
+  Aniversário: <%= customer.birthday %>
+  
+
+<% end %>
+<% else %>
+  <p>Não existem clientes cadastrados!</p>
+<% end %>
