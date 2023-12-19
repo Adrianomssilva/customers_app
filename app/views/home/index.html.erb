@@ -3,8 +3,8 @@
 <% if @customers.present? %>
 <% @customers.each do |customer|  %>
   <%=customer.full_name%>
-  Aniversário: <%= customer.birthday %>
-  
+  Aniversário: <%= I18n.l(customer.birthday) %>
+  Email: <%= customer.email %>
 
 <% end %>
 <% else %>
