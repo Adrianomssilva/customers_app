@@ -63,3 +63,5 @@ group :development do
 
 end
 
+
+gem "tailwindcss-rails", "~> 2.1"

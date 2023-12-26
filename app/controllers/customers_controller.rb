@@ -4,4 +4,8 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
   end
 
+  def index
+    @customers = Customer.all
+  end
+
 end

@@ -1,12 +1,3 @@
-<h2>Lista De Clientes</h2>
-
-<% if @customers.present? %>
-<% @customers.each do |customer|  %>
-  <%=link_to customer.full_name, customer%>
-  Aniversário: <%= I18n.l(customer.birthday) %>
-  Email: <%= customer.email %>
-
-<% end %>
-<% else %>
-  <p>Não existem clientes cadastrados!</p>
-<% end %>
+<h1 class="text-3xl font-bold underline">
+    Hello world!
+</h1>

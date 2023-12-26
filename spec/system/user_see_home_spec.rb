@@ -6,7 +6,7 @@ describe "Usuário chega na página home" do
     # Arrange
 
     # Act
-    visit root_path
+    visit customers_path
 
     # Assert
 
@@ -28,7 +28,7 @@ describe "Usuário chega na página home" do
                                   number: '20', complement: 'apto 400', city: 'Salvador', state: 'Bahia')
 
     # Act
-    visit root_path
+    visit customers_path
 
     # Assert
 
@@ -49,7 +49,7 @@ describe "Usuário chega na página home" do
     # Arrange
 
     # Act
-    visit root_path
+    visit customers_path
 
     # Assert
     expect(page).to have_content 'Não existem clientes cadastrados!'

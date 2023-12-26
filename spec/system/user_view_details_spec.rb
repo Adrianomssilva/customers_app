@@ -13,7 +13,7 @@ describe "usuário vê os detalhes de um cliente ao clicar no seu nome" do
                                   number: '200', complement: 'apto 500', city: 'Salvador', state: 'Bahia')
 
     #Act
-    visit root_path
+    visit customers_path
     click_on 'Adriano Silva'
 
     # Assert
