@@ -7,10 +7,12 @@ describe "usuário vê os detalhes de um cliente ao clicar no seu nome" do
     # Arrange
     customer1 = Customer.create!(name: "Adriano", last_name: "Silva", email: 'adriano@email.com',
                                   birthday: '08/02/1991', street: 'rua das mangueiras',district: 'Brotas',
-                                  number: '40', complement: 'apto 203', city: 'Salvador', state: 'Bahia')
+                                  number: '40', complement: 'apto 203', city: 'Salvador',
+                                  state: 'Bahia', cellphone: '9999999999')
     customer2 = Customer.create!(name: "Bianca", last_name: "Sedro", email: 'bianca@email.com',
                                   birthday: '31/10/1999', street: 'rua das margaridas',district: 'Barra',
-                                  number: '200', complement: 'apto 500', city: 'Salvador', state: 'Bahia')
+                                  number: '200', complement: 'apto 500', city: 'Salvador',
+                                  state: 'Bahia', cellphone: '9999999999')
 
     #Act
     visit customers_path

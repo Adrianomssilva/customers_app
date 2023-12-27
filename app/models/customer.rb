@@ -1,5 +1,8 @@
 class Customer < ApplicationRecord
 
+  validates :name, :email, :cellphone, :birthday, presence: true
+
+
   def full_name
     "#{name} #{last_name}"
   end

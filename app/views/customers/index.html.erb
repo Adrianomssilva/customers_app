@@ -1,5 +1,7 @@
 <h2>Lista De Clientes</h2>
 
+<%= link_to  "Cadastrar", new_customer_path %>
+
 <% if @customers.present? %>
 <% @customers.each do |customer|  %>
   <%=link_to customer.full_name, customer%>

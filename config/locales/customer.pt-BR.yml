@@ -1,0 +1,19 @@
+
+pt-BR:
+  activerecord:
+    models:
+      customer: 'Cliente'
+    attributes:
+      customer:
+        name: "Nome"
+        last_name: "Último Nome"
+        birthday: "Aniversário"
+        street: "Rua"
+        district: "Bairro"
+        number: "Número"
+        complement: "Complemento"
+        city: "Cidade"
+        state: "Estado"
+        email: "E-mail"
+        cellphone: "Celular"
+
