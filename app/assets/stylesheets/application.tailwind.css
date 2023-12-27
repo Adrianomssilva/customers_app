@@ -9,4 +9,10 @@
   .btn-blue:hover {
     @apply bg-red-500 text-black rounded-full;
   }
+  .btn-purple{
+    @apply bg-purple-900 text-white rounded-full;
+  }
+  .btn-purple:hover {
+    @apply bg-purple-500 text-white rounded-full;
+  }
 }
