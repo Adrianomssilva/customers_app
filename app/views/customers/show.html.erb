@@ -2,5 +2,8 @@
 
 <%= @customer.full_name %>
 Email: <%= @customer.email %>
+Telefone: <%= @customer.cellphone %>
 Endereço: <%= @customer.address %>
 Aniversário: <%= I18n.l(@customer.birthday)%>
+
+<%= link_to 'Editar', edit_customer_path %>

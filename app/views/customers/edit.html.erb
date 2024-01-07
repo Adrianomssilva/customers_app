@@ -1,4 +1,4 @@
-<h2>Cadastre um novo cliente</h2>
+<h2>Editar <%= @customer.full_name %></h2>
 
 
 <% if @customer.errors.any? %>
@@ -26,11 +26,11 @@
   </div>
   <div>
     <%= f.label :cellphone%>
-    <%= f.telephone_field :cellphone%>
+    <%= f.email_field :cellphone%>
   </div>
   <div>
     <%= f.label :birthday%>
-    <%= f.date_field :birthday %>
+    <%= f.text_field :birthday %>
   </div>
   <div>
     <%= f.label :street%>

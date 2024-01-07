@@ -23,6 +23,20 @@ class CustomersController < ApplicationController
 
   end
 
+  def edit
+    @customer = Customer.find(params[:id])
+  end
+
+  def update
+    @customer = Customer.find(params[:id])
+    if @customer.update(customer_params)
+      redirect_to @customer, notice: 'Cliente atualizado com sucesso.'
+    else
+      flash.now[:notice] = 'Não foi possível atualizar'
+      render :edit
+    end
+  end
+
 
   private
 
