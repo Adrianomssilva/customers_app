@@ -2,6 +2,7 @@ class Customer < ApplicationRecord
 
   validates :name, :email, :cellphone, :birthday, presence: true
 
+  enum status: {active: 0 , inactive: 3}
 
   def full_name
     "#{name} #{last_name}"
