@@ -6,4 +6,5 @@ Telefone: <%= @customer.cellphone %>
 Endereço: <%= @customer.address %>
 Aniversário: <%= I18n.l(@customer.birthday)%>
 
-<%= link_to 'Editar', edit_customer_path %>
+<p><%= link_to 'Editar', edit_customer_path, class: 'btn-blue' %></p>
+<%= button_to 'Deletar',{}, {class: 'btn-blue'}%>
