@@ -37,6 +37,13 @@ class CustomersController < ApplicationController
     end
   end
 
+  def delete
+    @customer = Customer.find(params[:id])
+
+    @customer.inactive!
+    redirect_to customers_path, notice: "Cliente #{@customer.full_name} deletado."
+  end
+
 
   private
 

@@ -17,7 +17,9 @@ describe "User delete customer" do
 
     # Assert
     expect(page).to have_content 'Bianca Sedro'
-    expect(page).to have_content 'E-mail: bianca@email.com'
+    expect(page).to have_content 'Email: bianca@email.com'
+    expect(page).to have_content "Cliente #{customer.full_name} deletado."
+    expect(page).not_to have_content 'E-mail: adriano@email.com'
   end
 
 end

@@ -3,7 +3,7 @@
 <%= link_to  "Cadastrar", new_customer_path %>
 
 <% if @customers.present? %>
-<% @customers.each do |customer|  %>
+<% @customers.active.each do |customer|  %>
   <%=link_to customer.full_name, customer%>
   Aniversário: <%= I18n.l(customer.birthday) %>
   Email: <%= customer.email %>
