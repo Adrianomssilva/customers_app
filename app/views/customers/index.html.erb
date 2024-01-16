@@ -1,5 +1,8 @@
-<%= form_with blablabla_path %>
-
+<%= form_with url: blablabla_path, method: :get do |f| %>
+<%= f.label :query, 'Buscar' %>
+<%= f.text_field :query %>
+<%= f.submit "Buscar" %>
+<% end %>
 <h2>Lista De Clientes</h2>
 
 <%= link_to  "Cadastrar", new_customer_path %>
