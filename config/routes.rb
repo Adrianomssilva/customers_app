@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   resources :customers, only: [:show, :index, :new, :create, :edit, :update] do
     patch 'delete', on: :member
+    get 'search', on: :collection
   end
 end

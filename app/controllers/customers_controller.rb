@@ -44,6 +44,9 @@ class CustomersController < ApplicationController
     redirect_to customers_path, notice: "Cliente #{@customer.full_name} deletado."
   end
 
+  def search
+
+  end
 
   private
 
