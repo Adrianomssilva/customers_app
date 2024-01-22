@@ -1,1 +1,12 @@
 <h2>Resultado da busca:</h2>
+
+<% if @customers.present? %>
+<% @customers.active.each do |customer|  %>
+  <%=link_to customer.full_name, customer%>
+  Aniversário: <%= I18n.l(customer.birthday) %>
+  Email: <%= customer.email %>
+
+<% end %>
+<% else %>
+  <p>Não existem clientes cadastrados!</p>
+<% end %>

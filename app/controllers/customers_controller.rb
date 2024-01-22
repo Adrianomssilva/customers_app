@@ -45,7 +45,12 @@ class CustomersController < ApplicationController
   end
 
   def search
-
+    @query = params["query"]
+    if @query.present?
+      @customers = Customer.active.where("name LIKE ?", "%#{@query}%")
+    else
+      redirect_to customers_path
+    end
   end
 
   private
