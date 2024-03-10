@@ -2,7 +2,7 @@
 
 
 <% if @customer.errors.any? %>
-  <p>Verifique os erros abaixo</p>
+  <p>Verifique os erros abaixo e tente novamente</p>
   <ul>
   <% @customer.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>
