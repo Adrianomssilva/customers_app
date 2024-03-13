@@ -3,16 +3,8 @@
 @tailwind utilities;
 
 @layer components{
-  .btn-blue{
-    @apply bg-blue-400 text-white rounded;
+  .btn-creme{
+    @apply bg-[#E5D0CC] rounded-full text-[#943133] size-10 ;
   }
-  .btn-blue:hover {
-    @apply bg-red-500 text-black rounded-full;
-  }
-  .btn-purple{
-    @apply bg-purple-900 text-white rounded-full;
-  }
-  .btn-purple:hover {
-    @apply bg-purple-500 text-white rounded-full;
-  }
+
 }

@@ -7,17 +7,11 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-
-    <h1 class= "text-3xl text-blue-400 font-bold underline">Cheia de Charme</h1>
-    <div class= "menu"> 
-      <%= link_to "Início", root_path %>
-    </div>
-
+    <%= render "header_and_footer/header" %>
     <%= notice %>
     <%= alert %>
     <%= yield %>

@@ -11,7 +11,7 @@
 <% end %>
 
 
-<%= form_with(model: @customer) do |f|  %>
+<%= form_with(model: @customer, data: {turbo: false}) do |f|  %>
   <div>
     <%= f.label :name%>
     <%= f.text_field :name %>
@@ -57,6 +57,6 @@
     <%= f.text_field :state%>
   </div>
   <div>
-    <%= f.submit class: 'btn-purple'%>
+    <%= f.submit %>
   </div>
   <% end %>
