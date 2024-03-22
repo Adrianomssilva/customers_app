@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 @layer components{
-  .btn-creme{
-    @apply bg-[#E5D0CC] rounded-full text-[#943133] size-10 ;
-  }
+
 
 }
