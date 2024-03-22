@@ -1,6 +1,6 @@
 class Customer < ApplicationRecord
 
-  validates :name, :email, :cellphone, :birthday, presence: true
+  validates :name,:last_name, :email, :cellphone, :birthday, presence: true
 
   enum status: {active: 0 , inactive: 3}
 

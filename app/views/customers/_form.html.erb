@@ -1,0 +1,65 @@
+<div class="bg-red-300 text-xl font-bold text-red-600 m-4 flex justify-center border-2 border-red-900">
+  <div class = "text-left">
+    <% if @customer.errors.any? %>
+      <p class="text-center">Verifique os erros abaixo: </p>
+      <ul class="list-inside list-disc">
+      <% @customer.errors.full_messages.each do |msg| %>
+        <li class="font-light text-base"><%= msg %></li>
+        <% end %>
+      </ul>
+  <% end %>
+  </div>
+</div> 
+
+
+<div class="p-4 flex flex-row text-base justify-center content-center font-sans font-bold text-">
+<%= form_with(model: @customer, data: {turbo: false}) do |f|  %>
+  <div class = " flex gap-1 items-center mb-4" > 
+    <%= f.label :name%>
+    <%= f.text_field :name , class: "rounded-lg font-normal text-sm"%>
+  </div> 
+  <div class = " flex gap-1 items-center mb-4">
+    <%= f.label :last_name%>
+    <%= f.text_field :last_name , class: "rounded-lg font-normal text-sm"%>
+  </div> 
+  <div class = " flex gap-1 items-center mb-4">
+    <%= f.label :email%>
+    <%= f.email_field :email , class: "rounded-lg font-normal text-sm"%>
+  </div>
+  <div class = " flex gap-1 items-center mb-4">
+    <%= f.label :cellphone%>
+    <%= f.telephone_field :cellphone , class: "rounded-lg font-normal text-sm"%>
+  </div>
+  <div class = " flex gap-1 items-center mb-4">
+    <%= f.label :birthday%>
+    <%= f.date_field :birthday , class: "rounded-lg font-normal text-sm"%>
+  </div>
+  <div class = " flex gap-1 items-center mb-4">
+    <%= f.label :street%>
+    <%= f.text_field :street , class: "rounded-lg font-normal text-sm"%>
+  </div>
+  <div class = " flex gap-1 items-center mb-4">
+    <%= f.label :number%>
+    <%= f.text_field :number , class: "rounded-lg font-normal text-sm"%>
+  </div>
+  <div class = " flex gap-1 items-center mb-4">
+    <%= f.label :complement%>
+    <%= f.text_field :complement , class: "rounded-lg font-normal text-sm"%>
+  </div>
+  <div class = " flex gap-1 items-center mb-4">
+    <%= f.label :district%>
+    <%= f.text_field :district , class: "rounded-lg font-normal text-sm"%>
+  </div>
+  <div class = " flex gap-1 items-center mb-4">
+    <%= f.label :city%>
+    <%= f.text_field :city , class: "rounded-lg font-normal text-sm"%>
+  </div>
+  <div class = " flex gap-1 items-center mb-4">
+    <%= f.label :state%>
+    <%= f.text_field :state, class: "rounded-lg font-normal text-sm"%>
+  </div>
+  <div class = " flex  justify-center">
+    <button class ="bg-[#943133] rounded hover:bg-rose-300 w-40 h-16"> <%= f.submit %> </button>
+  </div>
+  <% end %>
+  </div>

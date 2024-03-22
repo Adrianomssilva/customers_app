@@ -11,10 +11,10 @@
   </head>
 
   <body>
-    <%= render "header_and_footer/header" %>
+    <header><%= render "header_and_footer/header" %></header>
     <%= notice %>
     <%= alert %>
-    <%= yield %>
+    <div class="py-40 bg-[#E5D0CC]"><%= yield %></div>
 
   </body>
 </html>

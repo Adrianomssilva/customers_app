@@ -1,19 +1,35 @@
-<%= form_with url: search_customers_path, method: :get do |f| %>
-<%= f.label :query, "Busca"%>
-<%= f.text_field :query %>
-<%= f.submit "Buscar" %>
-<% end %>
-<h2>Lista De Clientes</h2>
+  <div class="font-sans text-sm" >
+  <div class="flex content-center p-4">
+    <div class="flex-1">
+      <%= link_to  "Cadastrar", new_customer_path, class: "text-2xl underline text-[#943133] font-bold hover:text-rose-300" %>
+    </div>
+    <div class="flex-1">
 
-<%= link_to  "Cadastrar", new_customer_path %>
+    </div>
+    <div class=" flex flex-1 justify-end font-bold">
+    <%= form_with url: search_customers_path, method: :get do |f| %>
+    <%= f.label :query , "Pesquisa"%>
+    <%= f.text_field :query, class: "text-sm font-normal" %>
+    <button class ="bg-[#943133] rounded hover:bg-rose-300 w-20 h-10"><%= f.submit "Buscar" %> <button></button>
+    <% end %>
+    </div>
+    
+  </div> 
+    <h2 class="text-center text-3xl text-[#943133] font-bold m-4">Lista De Clientes</h2>
 
-<% if @customers.present? %>
-<% @customers.active.each do |customer|  %>
-  <%=link_to customer.full_name, customer%>
-  Aniversário: <%= I18n.l(customer.birthday) %>
-  Email: <%= customer.email %>
-
-<% end %>
-<% else %>
-  <p>Não existem clientes cadastrados!</p>
-<% end %>
+    <div class="text-lg p-6 flex flex-row justify-center">
+    <% if @customers.present? %>
+    <ul>
+      <% @customers.active.each do |customer|  %>
+        <li class = "flex justify-start gap-3 border-2 m-2 border-[#943133] font-medium p-2">
+          <%=link_to customer.full_name, customer, class: "text-lg underline text-[#943133] font-bold hover:text-rose-300"%>
+          Aniversário: <%= I18n.l(customer.birthday) %>
+          Email: <%= customer.email %>
+        </li>
+      <% end %>
+    </ul>
+    <% else %>
+      <p>Não existem clientes cadastrados!</p>
+    <% end %>
+    </div>
+</div>
